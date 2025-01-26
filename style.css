@@ -156,3 +156,145 @@ h1 span:nth-child(1) {
     font-size: 15px;
   }
 }
+
+/* Styling for contact-info section */
+.contact-info {
+  list-style-type: none; /* Removes default list bullets */
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif; /* Sets font for the section */
+}
+
+.contact-info li {
+  display: flex; /* Aligns the icon and text horizontally */
+  align-items: center; /* Centers the items vertically */
+  margin-bottom: 15px; /* Adds space between the list items */
+  font-size: 18px; /* Sets font size */
+
+}
+
+.contact-info i {
+  font-size: 24px; /* Size of the icons */
+  margin-right: 10px; /* Space between icon and text */
+  color: #007bff; /* Icon color */
+}
+
+.contact-info a {
+  text-decoration: none; /* Removes underline from links */
+  color: #007bff; /* Link color */
+}
+
+.contact-info a:hover {
+  text-decoration: underline; /* Underlines the link on hover */
+}
+
+/* Optional: Make it mobile-responsive */
+@media (max-width: 600px) {
+  .contact-info li {
+      font-size: 16px; /* Smaller text on mobile */
+  }
+  .contact-info i {
+      font-size: 20px; /* Smaller icons on mobile */
+  }
+}
+
+/* Styling for social-media links */
+.social-media {
+  list-style-type: none;
+  padding: 0;
+  display: flex; /* Align items in a row */
+  gap: 20px; /* Space between items */
+  margin-top: 20px;
+}
+
+.social-media li {
+  display: inline-block;
+}
+
+.social-media a {
+  font-size: 24px; /* Icon size */
+  color: #007bff; /* Icon color */
+  text-decoration: none;
+}
+
+.social-media a:hover {
+  color: #0056b3; /* Darker color on hover */
+}
+
+.social-media iframe {
+  display: block; /* Ensures the iframe is displayed as a block element */
+  margin-top: 10px; /* Adds space above the iframe */
+}
+
+/* Optional: Styling icons */
+.social-media i {
+  transition: color 0.3s ease;
+}
+
+/* Ensure the box takes up a specific size */
+
+
+.project-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.project-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-item:hover img {
+  transform: scale(0.9);
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+  max-height: 150px; /* Limit the height */
+  overflow-y: auto; /* Enable scrolling for long text */
+  text-align: left;
+  font-size: 14px;
+}
+
+.project-item:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.description {
+  margin-bottom: 10px;
+}
+
+.github-link {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.github-link:hover {
+  background-color: #0056b3;
+}
+
+.disabled-link {
+  pointer-events: none;
+  color: rgb(6, 6, 6); /* Optional: Style to indicate it's disabled */
+  text-decoration: none; /* Remove underline if desired */
+  cursor: not-allowed; /* Show a "not-allowed" cursor on hover */
+}
