@@ -20,7 +20,10 @@ body {
   padding: 0px 60px;
 }
 
-#nav {
+#nav, #nav1 {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100px;
   display: flex;
@@ -28,16 +31,59 @@ body {
   align-items: center;
   justify-content: space-between;
   border-bottom: 2px solid #ddd;
+  z-index: 1000;
+  background-color: black;
 }
 
-#nav li {
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#nav li, #nav1 li {
   font-size: 20px;
   list-style: none;
   text-transform: uppercase;
   padding: 0px 40px;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1s forwards;
 }
 
-#nav ul {
+/* Delay for the first item in both #nav and #nav1 */
+#nav li:nth-child(1), #nav1 li:nth-child(1) {
+  animation-delay: 0.2s; /* Delay for the first item */
+}
+
+/* Delay for the second item in both #nav and #nav1 */
+#nav li:nth-child(2), #nav1 li:nth-child(2) {
+  animation-delay: 0.4s; /* Delay for the second item */
+}
+
+/* Delay for the third item in both #nav and #nav1 */
+#nav li:nth-child(3), #nav1 li:nth-child(3) {
+  animation-delay: 0.6s; /* Delay for the third item */
+}
+
+/* Delay for the fourth item in both #nav and #nav1 */
+#nav li:nth-child(4), #nav1 li:nth-child(4) {
+  animation-delay: 0.8s; /* Delay for the fourth item */
+}
+
+/* Delay for the fifth item in both #nav and #nav1 */
+#nav li:nth-child(5), #nav1 li:nth-child(5) {
+  animation-delay: 1s; /* Delay for the fifth item */
+}
+
+/* Delay for the sixth item in  #nav  */
+#nav li:nth-child(6) {
+  animation-delay: 1.2s; /* Delay for the fifth item */
+}
+
+#nav ul, #nav1 ul {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -49,6 +95,7 @@ body {
   display: flex;
   align-items: center;
 }
+
 .page2 {
   width: 100%;
   height: 90vh;
@@ -57,11 +104,14 @@ body {
   justify-content: center;
 }
 
+.section {
+  margin-bottom: 100px;
+}
+
 #left h1 {
   font-size: 90px;
   line-height: 100px;
   font-weight: 500;
-
   text-transform: uppercase;
 }
 
@@ -75,10 +125,11 @@ body {
 }
 
 #right img {
-  width: 100%;
+  width: 800px;
   z-index: -4;
   border-radius: 30px;
 }
+
 .circle-img {
   width: 100px;
   height: 100px;
@@ -87,6 +138,7 @@ body {
   object-fit: cover;
   border: 7px solid #000;
 }
+
 h1 span:nth-child(1) {
   margin-left: 40px;
 }
@@ -105,105 +157,63 @@ h1 span:nth-child(1) {
   border: 3px solid #fff;
 }
 
+.box h2, h3, h4 {
+  text-align: center;
+}
+
 .box h2 {
   margin-bottom: 20px;
-  font-size: 40px;
+  font-size: 30px;
 }
+
+h3 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+h4 {
+  margin-bottom: 20px;
+  font-size: 35px;
+}
+
 .box p {
   font-size: 20px;
 }
-@media screen and (max-width: 1000px) {
-  #left {
-    width: 100%;
-    margin: 50px 0;
-  }
-  #right {
-    width: 100%;
-  }
-  #left h1 {
-    font-size: 60px;
-    line-height: 80px;
-  }
 
-  .circle-img {
-    width: 70px;
-    height: 70px;
-    border: 3px solid #000;
-  }
-  #nav li {
-    font-size: 16px;
-    padding: 0px 20px;
-  }
-  .home-container {
-    flex-direction: column;
-    height: fit-content;
-  }
-  .box {
-    width: fit-content;
-    height: fit-content;
-    margin: 20px;
-  }
-  #right img {
-    width: 100%;
-    z-index: -4;
-    border-radius: 30px;
-  }
-  .box h2 {
-    margin-bottom: 20px;
-    font-size: 30px;
-  }
-  .box p {
-    font-size: 15px;
-  }
-}
-
-/* Styling for contact-info section */
 .contact-info {
-  list-style-type: none; /* Removes default list bullets */
+  list-style-type: none;
   padding: 0;
   margin: 0;
-  font-family: Arial, sans-serif; /* Sets font for the section */
+  font-family: Arial, sans-serif;
 }
 
 .contact-info li {
-  display: flex; /* Aligns the icon and text horizontally */
-  align-items: center; /* Centers the items vertically */
-  margin-bottom: 15px; /* Adds space between the list items */
-  font-size: 18px; /* Sets font size */
-
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 18px;
 }
 
 .contact-info i {
-  font-size: 24px; /* Size of the icons */
-  margin-right: 10px; /* Space between icon and text */
-  color: #007bff; /* Icon color */
+  font-size: 24px;
+  margin-right: 10px;
+  color: #007bff;
 }
 
 .contact-info a {
-  text-decoration: none; /* Removes underline from links */
-  color: #007bff; /* Link color */
+  text-decoration: none;
+  color: #007bff;
 }
 
 .contact-info a:hover {
-  text-decoration: underline; /* Underlines the link on hover */
+  text-decoration: underline;
 }
 
-/* Optional: Make it mobile-responsive */
-@media (max-width: 600px) {
-  .contact-info li {
-      font-size: 16px; /* Smaller text on mobile */
-  }
-  .contact-info i {
-      font-size: 20px; /* Smaller icons on mobile */
-  }
-}
-
-/* Styling for social-media links */
 .social-media {
   list-style-type: none;
   padding: 0;
-  display: flex; /* Align items in a row */
-  gap: 20px; /* Space between items */
+  display: flex;
+  gap: 20px;
   margin-top: 20px;
 }
 
@@ -212,27 +222,23 @@ h1 span:nth-child(1) {
 }
 
 .social-media a {
-  font-size: 24px; /* Icon size */
-  color: #007bff; /* Icon color */
+  font-size: 24px;
+  color: #007bff;
   text-decoration: none;
 }
 
 .social-media a:hover {
-  color: #0056b3; /* Darker color on hover */
+  color: #0056b3;
 }
 
 .social-media iframe {
-  display: block; /* Ensures the iframe is displayed as a block element */
-  margin-top: 10px; /* Adds space above the iframe */
+  display: block;
+  margin-top: 10px;
 }
 
-/* Optional: Styling icons */
 .social-media i {
   transition: color 0.3s ease;
 }
-
-/* Ensure the box takes up a specific size */
-
 
 .project-item {
   position: relative;
@@ -263,8 +269,8 @@ h1 span:nth-child(1) {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.3s ease, opacity 0.3s ease;
-  max-height: 150px; /* Limit the height */
-  overflow-y: auto; /* Enable scrolling for long text */
+  max-height: 150px;
+  overflow-y: auto;
   text-align: left;
   font-size: 14px;
 }
@@ -294,7 +300,398 @@ h1 span:nth-child(1) {
 
 .disabled-link {
   pointer-events: none;
-  color: rgb(6, 6, 6); /* Optional: Style to indicate it's disabled */
-  text-decoration: none; /* Remove underline if desired */
-  cursor: not-allowed; /* Show a "not-allowed" cursor on hover */
+  color: rgb(6, 6, 6);
+  text-decoration: none;
+  cursor: not-allowed;
+}
+
+:root {
+  --black-100: #121212;
+  --black-900: #ffffff;
+  --black-400: #b0b0b0;
+  --main-color: #f20e52;
+  --white: #ffffff;
+  --shadow-black-100: 0px 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.projects-section {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 20px;
+  gap: 20px;
+}
+
+.projects-item {
+  flex: 0 0 300px;
+  max-width: 300px;
+  display: flex;
+  text-decoration: none;
+}
+
+.projects-item-inner {
+  background: #1e1e1e;
+  box-shadow: var(--shadow-black-100);
+  padding: 25px;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 350px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.projects-item-inner:hover {
+  background-color: var(--main-color);
+  transform: translateY(-5px);
+}
+
+.projects-item-inner .icon {
+  height: 50px;
+  width: 50px;
+  background-color: var(--main-color);
+  margin: 15px auto;
+  text-align: center;
+  font-size: 22px;
+  color: var(--white);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.projects-item-inner:hover .icon {
+  background-color: rgb(54, 54, 54);
+  color: var(--main-color);
+}
+
+.projects-item-inner h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--black-900);
+  margin: 10px 0;
+  transition: all 0.3s ease;
+}
+
+.projects-item-inner:hover h3 {
+  color: rgb(54, 54, 54);
+}
+
+.projects-item-inner p {
+  font-size: 14px;
+  color: var(--white);
+  margin: 0;
+  line-height: 22px;
+  transition: all 0.3s ease;
+}
+
+.projects-item-inner:hover p {
+  color: var(--white);
+}
+
+.tech-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 15px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.tech-list li {
+  background-color: var(--main-color);
+  color: var(--white);
+  padding: 4px 8px;
+  border-radius: 50px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.tech-list1 {
+  list-style-type: none;
+  padding: 0;
+  margin: 15px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.tech-list1 li {
+  background-color: var(--main-color);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 12px;
+  display: inline-block;
+  font-size: 14px;
+}
+.projects-item-inner:hover .tech-list li {
+  background-color: rgb(54, 54, 54);
+  color: var(--white);
+}
+
+.arrow {
+  border: solid rgb(252, 251, 251);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transition: all 0.3s ease-in-out;
+  border-color: rgb(252, 251, 251);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.section-content {
+  padding: 60px 20px;
+  min-height: auto;
+  background-color: black;
+}
+
+
+.projects-header {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  #left, #right {
+    width: 100%;
+  }
+
+  #left h1 {
+    font-size: 60px;
+    line-height: 80px;
+  }
+
+  .circle-img {
+    width: 70px;
+    height: 70px;
+    border: 3px solid #000;
+  }
+
+  #nav li, #nav1 li {
+    font-size: 16px;
+    padding: 0px 20px;
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 1s forwards;
+  }
+
+  /* Delay for the first item in both #nav and #nav1 */
+#nav li:nth-child(1), #nav1 li:nth-child(1) {
+  animation-delay: 0.2s; /* Delay for the first item */
+}
+
+/* Delay for the second item in both #nav and #nav1 */
+#nav li:nth-child(2), #nav1 li:nth-child(2) {
+  animation-delay: 0.4s; /* Delay for the second item */
+}
+
+/* Delay for the third item in both #nav and #nav1 */
+#nav li:nth-child(3), #nav1 li:nth-child(3) {
+  animation-delay: 0.6s; /* Delay for the third item */
+}
+
+/* Delay for the fourth item in both #nav and #nav1 */
+#nav li:nth-child(4), #nav1 li:nth-child(4) {
+  animation-delay: 0.8s; /* Delay for the fourth item */
+}
+
+/* Delay for the fifth item in both #nav and #nav1 */
+#nav li:nth-child(5), #nav1 li:nth-child(5) {
+  animation-delay: 1s; /* Delay for the fifth item */
+}
+
+/* Delay for the sixth item in  #nav  */
+#nav li:nth-child(6) {
+  animation-delay: 1.2s; /* Delay for the fifth item */
+}
+
+
+  .home-container {
+    flex-direction: column;
+    height: auto;
+    padding: 110px 20px;
+    text-align: center;
+  }
+
+
+
+  .box {
+    width: fit-content;
+    height: fit-content;
+    margin: 20px;
+  }
+
+  #right img {
+    width: 100%;
+    z-index: -4;
+    border-radius: 30px;
+  }
+
+  .box h2 {
+    font-size: 20px;
+  }
+
+  .box p {
+    font-size: 15px;
+  }
+
+  #left h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .social-media {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+}
+}
+
+@media screen and (max-width: 600px) {
+  #nav ul, #nav1 ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #nav ul li a, #nav1 ul li a {
+    font-size: 9px;
+    padding: 6px 6px;
+  }
+
+
+
+
+  #nav h1, #nav1 h1 {
+    display: none;
+  }
+
+  h4 {
+    font-size: 25px;
+  }
+
+  h3 {
+    font-size: 23px;
+  }
+
+  .arrow {
+    border-width: 0 2px 2px 0;
+    padding: 2px;
+  }
+
+  .left {
+    margin-bottom: 10px;
+    margin-left: 280px;
+  }
+
+  #left h1 {
+    font-size: 45px;
+    line-height: 55px;
+  }
+
+  .circle-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .box {
+    width: 90%;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .box h2 {
+    font-size: 18px;
+  }
+
+  .box p {
+    font-size: 14px;
+  }
+
+  .projects-section {
+    padding: 30px 10px;
+  }
+
+  .projects-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .projects-item-inner {
+    height: auto;
+    padding: 20px;
+  }
+
+  .tech-list {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .tech-list li {
+    font-size: 10px;
+    margin: 5px;
+  }
+
+  #left h2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  #left h2:first-of-type {
+    font-size: 25px;
+  }
+
+  .contact-info li span {
+    font-size: 16px;
+  }
+
+  .contact-info li a {
+    font-size: 16px;
+  }
+
+
+  .social-media {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+}
+}
+
+
+
+.btn1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color);
+  margin: 1rem 0;
+  padding: 15px 40px;
+  border: none;
+  color: var(--white);
+  border-radius: 24px;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 600;
+  transition: all 0.3s ease-out;
+}
+
+.btn1 i {
+  margin-right: 8px;
+  font-size: 24px;
+}
+
+.btn1:hover {
+  background-color: var(--hover-color);
 }

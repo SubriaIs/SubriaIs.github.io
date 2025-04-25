@@ -30,3 +30,4 @@ gsap.from(".page2 .box", {
   stagger: 0.4,
   scrollTrigger: ".page2 .box"
 });
+
