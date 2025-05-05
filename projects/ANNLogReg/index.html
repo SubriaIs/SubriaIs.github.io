@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Subria Islam</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  </head>
+  <body>
+    <div class="page" id="page1">
+        <div id="nav" class="section">
+            <h1 style="color: #f20e52; padding-left: 20px;">Subria Islam</h1>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#techstack">Tech Stack</a></li>
+                <li><a href="#keyfeatures">Key Features</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="../../index.html" class="arrow left"></a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Overview Section -->
+    <div class="section-content" id="overview" style="padding: 62px; font-size: 18px; margin-top: 50px;">
+        <h4 style="color: #f20e52;">ANN LogReg</h4>
+        <h3 style="color: #f20e52;">Overview</h3>
+        <br>
+        <p> <strong>Objective:</strong>
+            This project focuses on predicting diabetes using two supervised machine learning models—Artificial
+             Neural Network (ANN) and Logistic Regression—on a real-world medical dataset collected from the
+             National Institute of Diabetes and Digestive and Kidney Diseases. The dataset contains 768 instances
+             with 9 numerical features related to patient health metrics.<br>
+             <br>
+            Key steps in the project include:<br> <br>
+            <span style="margin-left: 20px;">• Data Preprocessing: Replacing invalid zero values with mean values, splitting data into training/testing sets, and scaling features using StandardScaler.</span><br><br>
+            <span style="margin-left: 20px;">• Model Development:</span><br>
+            <span style="margin-left: 40px;">• ANN Model: Built using Keras Sequential API with ReLU and Sigmoid activations, evaluated with confusion matrix, accuracy, precision, and recall. Dropout layers were added to reduce overfitting.</span><br>
+            <span style="margin-left: 40px;">• Logistic Regression: Trained and evaluated using the same metrics for performance comparison.</span><br><br>
+            <span style="margin-left: 20px;">• Model Evaluation: Logistic Regression achieved slightly better accuracy, precision, and recall compared to the ANN model.</span><br><br>
+            <span style="margin-left: 20px;">• Prediction on New Data: Both models were saved and later used to predict outcomes on new patient data using consistent scaling and thresholding.</span><br><br>
+            <span style="margin-left: 20px;">• Conclusion: Logistic Regression outperformed ANN in this case, but ANN performance could be improved with further tuning and regularization.</span><br>
+        </p>
+        <br>
+        <br>
+        <p><strong>Duration:</strong> March 2025 - April 2025 </p>
+        <br>
+        <p><strong>Team Size:</strong> Solo project </p>
+    </div>
+
+    <!-- Tech Stack Section -->
+    <div class="section-content" id="techstack" style="padding: 62px; font-size: 18px; margin-top: 50px;">
+        <h3 style="color: #f20e52; margin-top: 50px;">Tech Stack</h3>
+        <br>
+        <p><strong>Data Handling & Preprocessing:</strong><br>
+
+            • Python – Core programming language<br>
+
+            • Pandas – Data manipulation and analysis<br>
+
+            • NumPy – Numerical operations<br>
+
+            • Scikit-learn –<br>
+            <span style="margin-left: 20px;">- Data preprocessing (StandardScaler)</span><br>
+            <span style="margin-left: 20px;">- Model training (Logistic Regression):</span><br>
+            <span style="margin-left: 20px;">- Metrics (Accuracy, Precision, Recall, Confusion Matrix)</span><br>
+            <span style="margin-left: 20px;">- Train-test split</span><br>
+        </p>
+        <br>
+        <p><strong>Machine Learning & Deep Learning:</strong><br>
+            • Keras (with TensorFlow backend) – Building and training the ANN model (Sequential, Dense, Dropout)<br>
+            • Scikit-learn – Logistic Regression model<br>
+        </p>
+        <br>
+        <p><strong>Visualization:</strong><br>
+            • Matplotlib – Training history plots and loss/accuracy visualization<br>
+            • Seaborn – Confusion matrix heatmaps<br>
+        </p>
+        <br>
+        <p><strong>Model Saving & Deployment:</strong><br>
+            • TensorFlow/Keras – model.save() for saving ANN model<br>
+            • Pickle – Saving and loading StandardScaler instance<br>
+        </p>
+        <br>
+        <p><strong>Data I/O:</strong><br>
+            • CSV Files – Input data and new prediction data (new_data_for_prediction.csv)<br>
+        </p>
+
+    </div>
+
+    <!-- Key Features Section -->
+    <div class="section-content" id="keyfeatures" style="padding: 62px; font-size: 18px; margin-top: 50px;">
+        <h3 style="color: #f20e52; margin-top: 50px;">Key Features</h3>
+        <br>
+        <p><strong>• Real-world Medical Dataset:</strong><br>
+            <span style="margin-left: 20px;">-Sourced from the National Institute of Diabetes and Digestive and Kidney Diseases</span><br>
+            <span style="margin-left: 20px;">-768 patient records with 9 numerical features</span><br>
+        </p>
+        <br>
+        <p><strong>• Data Cleaning & Preprocessing:</strong><br>
+            <span style="margin-left: 20px;">- Replaced zero values in key columns with column means</span><br>
+            <span style="margin-left: 20px;">- Feature scaling using StandardScaler</span><br>
+            <span style="margin-left: 20px;">- 80/20 train-test split</span><br>
+        </p>
+        <br>
+        <p><strong>• Two Supervised ML Models:</strong><br>
+            <span style="margin-left: 20px;">- Artificial Neural Network (ANN) with Dropout to reduce overfitting</span><br>
+            <span style="margin-left: 20px;">- Logistic Regression for comparison</span><br>
+        </p>
+        <br>
+        <p><strong>• Performance Evaluation:</strong><br>
+            <span style="margin-left: 20px;">- Metrics used: Accuracy, Precision, Recall, Confusion Matrix</span><br>
+            <span style="margin-left: 20px;">- Logistic Regression slightly outperformed ANN</span><br>
+        </p>
+        <br>
+        <p><strong>• Model Saving & Deployment:</strong><br>
+            <span style="margin-left: 20px;">- Saved both model and scaler</span><br>
+            <span style="margin-left: 20px;">- Used for prediction on new data</span><br>
+        </p>
+        <br>
+        <p><strong>• Tools & Libraries:</strong><br>
+            <span style="margin-left: 20px;">- Python, Pandas, NumPy, Scikit-learn, Keras, Matplotlib, Seaborn, Pickle</span><br>
+        </p>
+    </div>
+
+    <!-- Achievements Section -->
+    <div class="section-content" id="achievements" style="padding: 62px; font-size: 18px; margin-top: 50px;">
+        <h3 style="color: #f20e52; margin-top: 50px;">Achievements</h3>
+        <br>
+        <p>
+            • Successfully built and compared two supervised learning models (ANN & Logistic Regression) to predict diabetes using a real-world dataset.<br>
+
+            • Achieved 82% accuracy with Logistic Regression, outperforming the ANN model (79.87%).<br>
+
+            • Implemented effective data preprocessing, including handling invalid values and applying feature scaling to improve model performance.<br>
+
+            • Addressed overfitting in ANN by introducing Dropout layers, improving generalization capability.<br>
+
+            • Saved and reused models and scalers for future predictions on unseen patient data—enabling scalable deployment.<br>
+
+            • Visualized key evaluation metrics (confusion matrix, loss curves, etc.) to understand and interpret model performance clearly.<br>
+
+            • Demonstrated practical application of machine learning in healthcare by accurately predicting diabetes risk.<br>
+        </p>
+    </div>
+
+    <!-- Demo Section -->
+    <div class="section-content" id="demo" style="padding: 62px; font-size: 18px; margin-top: 50px;">
+        <h3 style="color: #f20e52; margin-top: 50px;">Demo</h3>
+        <br>
+        <br>
+        <video width="100%" controls>
+            <source src="https://github.com/SubriaIs/SubriaIs.github.io/raw/refs/heads/main/projects/ANNLogReg/videos/ANNLogReg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <br>
+        <a href="ANN_neural_network_AND_Logistic_regression.pdf" class="btn1" target="_blank">
+            <i class="fas fa-file-pdf"></i> View PDF
+        </a>
+        <br>
+        <a href="https://github.com/SubriaIs/diabetes-ann-logreg.git" class="btn1"><i class="fab fa-github"></i> View in GitHub </a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js" integrity="sha512-LQQDtPAueBcmGXKdOBcMkrhrtqM7xR2bVrnMtYZ8ImAZhFlIb5xrMqQ6uZviyeSB+4mYj89ta8niiCIQM1Gj0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+
+<body>
+</html>
