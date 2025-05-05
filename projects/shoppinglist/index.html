@@ -31,18 +31,18 @@
         <h4 style="color: #f20e52;">Shopping List App</h4>
         <h3 style="color: #f20e52;">Overview</h3>
         <br>
-        <div style="padding: 40px 55px;">
-        <p>
-            <span style="color: #f20e52; font-weight: bold;">Objective: </span>
-            A real-time collaborative shopping list application that allows users to create, manage, and share shopping lists with others.
-            With built-in group management and instant notifications, users can seamlessly coordinate purchases and keep everyone on the same page.
-          </p>
-
-        <br>
-        <p>
-            <span style="color: #f20e52; font-weight: bold;">Duration: </span>
-            October 2024 - December 2024
+        <p> <strong>Objective:</strong>
+            This feature-rich Shopping List Application enables users to efficiently create, edit,
+            and manage personal and shared shopping lists. It supports user authentication, real-time notifications,
+            profile management, and collaborative list sharing. The app automatically syncs updates,
+            allows product-level management within lists, and integrates with a backend API for full-stack functionality.
+            Whether accessed locally or via Docker, the application provides a smooth and intuitive user experience for individuals
+            and groups managing shopping needs.
         </p>
+        <br>
+        <p><strong>Duration:</strong> October 2024 - December 2024 </p>
+        <br>
+        <p><strong>Team Size:</strong> Solo project </p>
     </div>
     <!-- Tech Stack Section -->
     <div class="section-content" id="techstack" style="padding: 62px; font-size: 18px; margin-top: 50px;">
@@ -55,12 +55,17 @@
         <br>
         <p>
             <span style="color: #f20e52; font-weight: bold;">Backend: </span>
-            Java, JAX-RS (Java RESTful services), JPA, Hibernate
+            Java, JAX-RS, JPA, Hibernate
         </p>
         <br>
         <p>
             <span style="color: #f20e52; font-weight: bold;">Database: </span>
             Relational database (MySQL)
+        </p>
+        <br>
+        <p>
+            <span style="color: #f20e52; font-weight: bold;">Containerization/Deployment: </span>
+            Docker
         </p>
         <br>
     </div>
@@ -69,34 +74,44 @@
     <div class="section-content" id="keyfeatures" style="padding: 62px; font-size: 18px; margin-top: 50px;">
         <h3 style="color: #f20e52; margin-top: 50px;">Key Features</h3>
         <br>
-        <p>
-            <span style="color: #f20e52; font-weight: bold;">User Management: </span>
-            Sign up, log in, update password, and view profile
-        </p>
-        <br>
-        <p>
-            <span style="color: #f20e52; font-weight: bold;">Shopping List Management: </span>
-            Create, edit, delete shopping lists with product-level details
-        </p>
-        <br>
-        <p>
-            <span style="color: #f20e52; font-weight: bold;">Group Collaboration: </span>
-            Auto-created groups per list, member management, and list sharing
-        </p>
-        <br>
-        <p>
-            <span style="color: #f20e52; font-weight: bold;">Real-Time Notifications: </span>
-            Automatic alerts for list updates, member changes, and product edits
-        </p>
-        <br>
-        <p>
-            <span style="color: #f20e52; font-weight: bold;">Product Control: </span>
-            Add/remove/edit products with quantity, unit, and purchased status
-        </p>
-        <br>
-        <p>
-            <span style="color: #f20e52; font-weight: bold;">UI/UX Highlights: </span>
-            Edit/View modes, searchable lists/products, auto-sync and manual refresh
+        <p><strong>• User Account Management:</strong><br>
+            <span style="margin-left: 20px;">• Sign Up: Create a new account by providing username, email, phone number, and password.</span><br>
+            <span style="margin-left: 20px;">• Login: Securely log in using registered credentials.</span><br>
+            <span style="margin-left: 20px;">• Update Password: Change password from the profile section.</span><br>
+        </p><br>
+        <p><strong>• Shopping List Management:</strong><br>
+            <span style="margin-left: 20px;">• Create List: Add a new shopping list with a name and description.</span><br>
+            <span style="margin-left: 20px;">• Edit List: Modify list name, description, and product details.</span><br>
+            <span style="margin-left: 20px;">• View All Lists: Access and search through all personal and shared shopping lists.</span><br>
+            <span style="margin-left: 20px;">• View Specific List: See full details, including creator, products, and members.</span><br>
+            <span style="margin-left: 20px;">• Delete List: Permanently remove a shopping list with confirmation.</span><br>
+        </p><br>
+        <p><strong>• Product Management within Lists:</strong><br>
+            <span style="margin-left: 20px;">• Add/Remove Products: Manage products with fields like name, quantity, purchased status, and unit.</span><br>
+            <span style="margin-left: 20px;">• Product Filtering: Filter products by name within a list.</span><br>
+        </p><br>
+        <p><strong>• Sharing & Collaboration:</strong><br>
+            <span style="margin-left: 20px;">• Share Lists: Invite other registered users to collaborate on lists.</span><br>
+            <span style="margin-left: 20px;">• Manage Shared Lists: View, edit, or delete lists shared by others.</span><br>
+            <span style="margin-left: 20px;">• Group Membership: Automatically managed groups for each shared list.</span><br>
+        </p><br>
+        <p><strong>• Notifications:</strong><br>
+            <span style="margin-left: 20px;">• Real-Time Updates: Get notified of list changes, member actions, and product updates.</span><br>
+            <span style="margin-left: 20px;">• Notification Center: Access all alerts via the bell icon.</span><br>
+        </p><br>
+        <p><strong>• User Profile:</strong><br>
+            <span style="margin-left: 20px;">• View and manage profile details including email, username, and phone number.</span><br>
+        </p><br>
+        <p><strong>• Auto-Sync & Manual Refresh:</strong><br>
+            <span style="margin-left: 20px;">• Auto-Sync: Lists automatically update every 30 seconds.</span><br>
+            <span style="margin-left: 20px;">• Refresh Now: Manually reload data instantly.</span><br>
+        </p><br>
+        <p><strong>• Modes:</strong><br>
+            <span style="margin-left: 20px;">• Edit Mode: Modify lists and products.</span><br>
+            <span style="margin-left: 20px;">• View Mode: Read-only mode for reviewing list contents.</span><br>
+        </p><br>
+        <p><strong>• Logout:</strong><br>
+            <span style="margin-left: 20px;">• Securely log out of the application at any time.</span><br>
         </p>
     </div>
 
@@ -104,34 +119,50 @@
     <div class="section-content" id="achievements" style="padding: 62px; font-size: 18px; margin-top: 50px;">
         <h3 style="color: #f20e52;margin-top: 50px;">Achievements</h3>
         <br>
-        <p>
-            <span style="color: #f20e52; font-weight: bold; font-size: 30px; vertical-align: middle;">&#8226;</span>
-             Enabled real-time collaborative shopping with live updates and notifications
+        <p><strong>• Full User and Group Management:</strong>
+            Implemented robust user registration, authentication, and automatic group creation/removal tied to shopping lists for seamless collaboration.
         </p>
         <br>
-        <p>
-            <span style="color: #f20e52; font-weight: bold; font-size: 30px; vertical-align: middle;">&#8226;</span>
-            Simplified user experience with intuitive list and member management
+        <p><strong>• Collaborative List Sharing:</strong>
+            Enabled real-time multi-user collaboration on shopping lists with dynamic member management and access control.
         </p>
         <br>
-        <p>
-            <span style="color: #f20e52; font-weight: bold; font-size: 30px; vertical-align: middle;">&#8226;</span>
-            Designed with modular, scalable architecture using modern frontend and backend technologies
+        <p><strong>• Real-Time Notification System:</strong>
+            Integrated an automated notification system that informs users of all relevant activities like product changes and member updates without manual input.
         </p>
         <br>
-        <p>
-            <span style="color: #f20e52; font-weight: bold; font-size: 30px; vertical-align: middle;">&#8226;</span>
-            Improved productivity for users by automating group creation and syncing updates seamlessly
+        <p><strong>• Product-Level Control:</strong>
+            Developed detailed product handling features (add, edit, delete, filter) within each shopping list, enhancing list usability.
         </p>
-
+        <br>
+        <p><strong>• Flexible Deployment Options:</strong>
+            Delivered support for both local development and Docker-based deployment, allowing easy setup across environments.
+        </p>
+        <br>
+        <p><strong>• Auto-Sync and Manual Refresh:</strong>
+            Implemented automatic list updates every 30 seconds and a manual refresh feature for immediate synchronization.
+        </p>
+        <br>
+        <p><strong>• Secure and Scalable Architecture:</strong>
+            Designed a clean separation between frontend and backend with token-based authentication for secure API access.
+        </p>
+        <br>
+        <p><strong>• Intuitive UI/UX:</strong>
+            Created a clean, user-friendly interface with clear navigation between personal lists, shared content, and profile settings.
+        </p>
     </div>
 
     <!-- Demo Section -->
     <div class="section-content" id="demo" style="padding: 62px; font-size: 18px; margin-top: 50px;">
         <h3 style="color: #f20e52;margin-top: 50px;">Demo</h3>
         <br>
-        <p>Hi, I’m Subria, a passionate Full-Stack Software Engineer with experience in both front-end and back-end development. I work with technologies like Java, React, Python, Docker, MySQL, SQLite3, and more. Always eager to learn new technologies, I deliver high-quality solutions using a broad range of tools and frameworks including Jax-RS, J2EE, Hibernate, HTML, CSS, Git, React Native, Android, TypeScript and JavaScript.</p>
-        <a href="https://github.com/nugets241/JavaFX-SudokuApp-2024" class="btn1"><i class="fab fa-github"></i> View in GitHub</a>
+        <br>
+        <video width="100%" controls>
+            <source src="https://github.com/SubriaIs/SubriaIs.github.io/raw/refs/heads/main/projects/shoppinglist/videos/Shoppinglist.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <br>
+        <a href="https://github.com/SubriaIs/shopping_list.git" class="btn1"><i class="fab fa-github"></i> View in GitHub </a>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
