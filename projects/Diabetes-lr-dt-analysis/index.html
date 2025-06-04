@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Subria Islam</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  </head>
+  <body>
+    <div class="page" id="page1">
+        <div id="nav" class="section">
+            <h1 style="color: #f20e52; padding-left: 20px;">Subria Islam</h1>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#techstack">Tech Stack</a></li>
+                <li><a href="#keyfeatures">Key Features</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="../../index.html" class="arrow left"></a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Overview Section -->
+    <div class="section-content" id="overview" style="padding: 62px; font-size: 18px; margin-top: 50px;">
+        <h4 style="color: #f20e52;">Diabetes Prediction with Logistic Regression and Decision Tree</h4>
+        <h3 style="color: #f20e52;">Overview</h3>
+        <br>
+        <p> <strong>Objective:</strong>
+            This project aims to predict the likelihood of diabetes using two supervised machine learning
+             models—Logistic Regression and Decision Tree—on a real-world diabetes dataset
+             collected from the National Institute of Diabetes and Digestive and Kidney Diseases.
+             The dataset contains 768 instances with 9 numerical health-related features.<br>
+             <br>
+            Key steps in the project include:<br> <br>
+            <span style="margin-left: 20px;">• Data Preprocessing: Replacing invalid zero values with mean values, splitting data into training and testing sets (80/20 split), and standardizing features using StandardScaler.</span><br><br>
+            <span style="margin-left: 20px;">• Model Development:</span><br>
+            <span style="margin-left: 40px;">• Logistic Regression: Trained and evaluated using accuracy, precision, recall, and confusion matrix metrics.</span><br>
+            <span style="margin-left: 40px;">• Decision Tree: Trained with a maximum depth of 3, visualized using Graphviz, and evaluated using the same metrics for comparison.</span><br><br>
+            <span style="margin-left: 20px;">• Model Evaluation: Logistic Regression demonstrated better performance in accuracy, precision, and recall compared to the Decision Tree model.</span><br><br>
+            <span style="margin-left: 20px;">• Prediction on New Data:  Both models were used to predict diabetes outcomes for new patient profiles, showcasing their practical application.</span><br><br>
+            <span style="margin-left: 20px;">• Conclusion: Logistic Regression outperformed the Decision Tree in this dataset, though further improvements could be achieved through advanced preprocessing and hyperparameter tuning.</span><br>
+        </p>
+        <br>
+        <br>
+        <p><strong>Duration:</strong> December 2024 - April 2025 </p>
+        <br>
+        <p><strong>Team Size:</strong> Solo project </p>
+    </div>
+
+
+    <!-- Tech Stack Section -->
+    <div class="section-content" id="techstack" style="padding: 62px; font-size: 18px; margin-top: 50px;">
+        <h3 style="color: #f20e52; margin-top: 50px;">Tech Stack</h3>
+        <br>
+        <p><strong>Data Handling & Preprocessing:</strong><br>
+            • Python – Core programming language<br>
+            • Pandas – Data loading, cleaning, and manipulation<br>
+            • NumPy – Numerical computations<br>
+            • Scikit-learn –<br>
+            <span style="margin-left: 20px;">- Data preprocessing (StandardScaler)</span><br>
+            <span style="margin-left: 20px;">- Train-test data split</span><br>
+            <span style="margin-left: 20px;">- Model evaluation (Accuracy, Precision, Recall, Confusion Matrix)</span><br>
+        </p>
+        <br>
+        <p><strong>Machine Learning:</strong><br>
+
+            • Scikit-learn –<br>
+            <span style="margin-left: 20px;">- Logistic Regression model</span><br>
+            <span style="margin-left: 20px;">- Decision Tree Classifier (with visualization support)</span><br>
+        </p>
+        <br>
+        <p><strong>Visualization:</strong><br>
+            • Matplotlib – Plotting confusion matrix heatmaps<br>
+            • Seaborn – Enhanced heatmap visualizations<br>
+            • Graphviz – Visualizing the structure of the trained Decision Tree<br>
+        </p>
+        <br>
+        <p><strong>Data I/O:</strong><br>
+            • CSV Files – Reading dataset (diabetes.csv) and predicting outcomes on new patient data<br>
+        </p>
+
+    </div>
+
+
+    <!-- Key Features Section -->
+    <div class="section-content" id="keyfeatures" style="padding: 62px; font-size: 18px; margin-top: 50px;">
+        <h3 style="color: #f20e52; margin-top: 50px;">Key Features</h3>
+        <br>
+        <p><strong>• Real-world Medical Dataset:</strong><br>
+            <span style="margin-left: 20px;">-Collected from the National Institute of Diabetes and Digestive and Kidney Diseases</span><br>
+            <span style="margin-left: 20px;">-Contains 768 patient records with 9 numerical health-related attributes</span><br>
+        </p>
+        <br>
+        <p><strong>• Data Cleaning & Preprocessing:</strong><br>
+            <span style="margin-left: 20px;">- Replaced invalid zero values in critical columns (e.g., Glucose, BMI, Insulin) with column means</span><br>
+            <span style="margin-left: 20px;">- Applied feature scaling using StandardScaler </span><br>
+            <span style="margin-left: 20px;">-  Data split into 80% training and 20% testing sets</span><br>
+        </p>
+        <br>
+        <p><strong>• Two Supervised ML Models:</strong><br>
+            <span style="margin-left: 20px;">- Logistic Regression for linear classification</span><br>
+            <span style="margin-left: 20px;">- Decision Tree Classifier with depth constraint and visual interpretation</span><br>
+        </p>
+        <br>
+        <p><strong>• Performance Evaluation:</strong><br>
+            <span style="margin-left: 20px;">- Metrics used: Accuracy, Precision, Recall, Confusion Matrix</span><br>
+            <span style="margin-left: 20px;">- Logistic Regression demonstrated higher accuracy and precision than Decision Tree</span><br>
+        </p>
+        <br>
+        <p><strong>•  Prediction on New Data:</strong><br>
+            <span style="margin-left: 20px;">- Both models used to predict outcomes on new, unseen patient data</span><br>
+        </p>
+        <br>
+        <p><strong>• Tools & Libraries:</strong><br>
+            <span style="margin-left: 20px;">- Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Graphviz</span><br>
+        </p>
+    </div>
+
+    <!-- Achievements Section -->
+    <div class="section-content" id="achievements" style="padding: 62px; font-size: 18px; margin-top: 50px;">
+        <h3 style="color: #f20e52; margin-top: 50px;">Achievements</h3>
+        <br>
+        <p>
+            • Successfully implemented and compared two supervised learning models—Logistic Regression and Decision Tree—to predict diabetes using a real-world medical dataset.<br>
+
+            • Achieved 82% accuracy with Logistic Regression, outperforming the Decision Tree model (76%).<br>
+
+            • Effectively handled data quality issues by replacing invalid zero values with column means and standardizing features to enhance model performance.<br>
+
+            • Visualized Decision Tree structure using Graphviz, aiding in interpretability of model decisions.<br>
+
+            • Used confusion matrix, precision, recall, and accuracy metrics to evaluate and compare both models thoroughly.<br>
+
+            • Predicted diabetes outcomes on new patient data, demonstrating real-world applicability and inference capability.<br>
+
+            • Showcased practical use of machine learning in healthcare diagnostics through structured modeling and evaluation.<br>
+        </p>
+    </div>
+
+
+    <!-- Demo Section -->
+    <div class="section-content" id="demo" style="padding: 62px; font-size: 18px; margin-top: 50px;">
+        <h3 style="color: #f20e52;margin-top: 50px;">Demo</h3>
+        <br>
+        <br>
+        <video width="100%" controls>
+            <source src="https://github.com/SubriaIs/SubriaIs.github.io/raw/refs/heads/main/projects/Diabetes-lr-dt-analysis/videos/diabetes-lr-dt-analysis.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <br>
+        <a href="diabetes_logistic_regression_and_Decision_tree.pdf" class="btn1" target="_blank">
+            <i class="fas fa-file-pdf"></i> View PDF
+        </a>
+        <br>
+        <a href="https://github.com/SubriaIs/diabetes-lr-dt-analysis.git" class="btn1"><i class="fab fa-github"></i> View in GitHub </a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js" integrity="sha512-LQQDtPAueBcmGXKdOBcMkrhrtqM7xR2bVrnMtYZ8ImAZhFlIb5xrMqQ6uZviyeSB+4mYj89ta8niiCIQM1Gj0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+
+<body>
+</html>
