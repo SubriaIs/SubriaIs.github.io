@@ -30,7 +30,6 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2px solid #ddd;
   z-index: 1000;
   background-color: black;
 }
@@ -120,14 +119,16 @@ body {
   z-index: 1;
 }
 
-#right {
-  width: 50%;
+ #right {
+    position: absolute;
+    right: 0;
+    top: 10;
 }
 
 #right img {
-  width: 800px;
-  z-index: -4;
-  border-radius: 30px;
+    margin-top: 440px;
+    height: auto;
+    max-width: 90%; /* Optional, keeps image responsive */
 }
 
 .circle-img {
@@ -529,10 +530,14 @@ h4 {
     margin: 20px;
   }
 
+ #right {
+      margin-top: -120px; /* reduce top margin for small devices */
+      padding: 0 20px;
+  }
+
   #right img {
-    width: 100%;
-    z-index: -4;
-    border-radius: 30px;
+      height: 60%;
+      width: 60%; /* scale image to fit better */
   }
 
   .box h2 {
@@ -666,7 +671,18 @@ h4 {
     gap: 20px;
     margin-top: 20px;
     justify-content: center;
+
 }
+
+#right {
+      margin-top: 160px; /* reduce top margin for small devices */
+      padding: 0 20px;
+  }
+
+  #right img {
+      height: 60%;
+      width: 60%; /* scale image to fit better */
+  }
 }
 
 
@@ -695,3 +711,12 @@ h4 {
 .btn1:hover {
   background-color: var(--hover-color);
 }
+
+
+#typing-text {
+            font-size: 18px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid black; /* typing cursor effect */
+            width: fit-content;
+        }
