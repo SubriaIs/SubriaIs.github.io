@@ -720,3 +720,12 @@ h4 {
             border-right: 2px solid black; /* typing cursor effect */
             width: fit-content;
         }
+
+
+
+
+
+/* Hover effect */
+ul li a:hover {
+  color: #f20e52;
+}

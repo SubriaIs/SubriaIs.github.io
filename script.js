@@ -32,30 +32,42 @@ gsap.from(".page2 .box", {
 });
 
 
-const fullText = "Full-Stack Software Engineer | Passionate Problem-Solver | Focused on Simplicity & Usability";
-    const typingSpeed = 50; // milliseconds per character
-    const deletingSpeed = 25; // milliseconds per character
-    const delayBetweenLoops = 1500; // pause before deleting/typing again
+const phrases = [
+    "Full-Stack Software Engineer",
+    "Passionate Problem-Solver",
+    "Focused on Simplicity & Usability"
+];
 
-    let i = 0;
-    let isDeleting = false;
-    const element = document.getElementById("typing-text");
+const typingSpeed = 50; // ms per character when typing
+const deletingSpeed = 25; // ms per character when deleting
+const delayBetweenLoops = 1500; // pause after typing a full phrase
 
-    function typeEffect() {
-        if (isDeleting) {
-            element.textContent = fullText.substring(0, i--);
-        } else {
-            element.textContent = fullText.substring(0, i++);
-        }
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
-        if (!isDeleting && i === fullText.length) {
-            setTimeout(() => isDeleting = true, delayBetweenLoops);
-        } else if (isDeleting && i === 0) {
-            isDeleting = false;
-        }
+const element = document.getElementById("typing-text");
 
-        setTimeout(typeEffect, isDeleting ? deletingSpeed : typingSpeed);
+function typeEffect() {
+    const currentPhrase = phrases[phraseIndex];
+
+    if (isDeleting) {
+        element.textContent = currentPhrase.substring(0, charIndex--);
+    } else {
+        element.textContent = currentPhrase.substring(0, charIndex++);
     }
 
-    typeEffect();
+    let delay = isDeleting ? deletingSpeed : typingSpeed;
 
+    if (!isDeleting && charIndex === currentPhrase.length) {
+        delay = delayBetweenLoops;
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length; // move to next phrase
+    }
+
+    setTimeout(typeEffect, delay);
+}
+
+typeEffect();
