@@ -93,6 +93,7 @@ body {
   height: 600px;
   display: flex;
   align-items: center;
+
 }
 
 .page2 {
@@ -126,7 +127,7 @@ body {
 }
 
 #right img {
-    margin-top: 440px;
+    margin-top: 280px;
     height: auto;
     max-width: 90%; /* Optional, keeps image responsive */
 }
@@ -728,4 +729,27 @@ h4 {
 /* Hover effect */
 ul li a:hover {
   color: #f20e52;
+}
+
+
+#nav1 ul li a {
+  text-decoration: none;
+}
+
+#nav ul li a,
+#nav1 ul li a:hover {
+  text-decoration: underline;
+}
+
+ul li a.active {
+  color: #f20e52; /* red color for active */
+}
+
+
+#nav ul li a {
+  text-decoration: none;
+}
+
+#nav ul li a:hover {
+  text-decoration: underline;
 }

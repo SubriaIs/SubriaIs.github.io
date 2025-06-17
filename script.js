@@ -71,3 +71,17 @@ function typeEffect() {
 }
 
 typeEffect();
+
+
+
+  // Select all nav links
+  const navLinks = document.querySelectorAll('#nav1 ul li a');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      // Remove 'active' class from all links
+      navLinks.forEach(lnk => lnk.classList.remove('active'));
+      // Add 'active' to clicked link
+      this.classList.add('active');
+    });
+  });
